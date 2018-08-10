@@ -14,7 +14,7 @@
       </li>
     </ul>
     <div class='setup__total'>
-      <input class='setup__input' type="text" :value='total'>
+      <input class='setup__input' type="text" disabled :value='total'>
       <span>Total</span>
     </div>
 <button class='submit' @click.prevent='startTime'>Go</button>
