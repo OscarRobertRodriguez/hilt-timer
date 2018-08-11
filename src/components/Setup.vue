@@ -4,7 +4,7 @@
   <ul class='setup'>
        <li class="setup__phase" v-for='(time,index) in timers' :key='index'>
         <div class='setup__display'>
-          <input class='setup__input' type='text'  :value="time.amount > 0 ? time.amount : 0" @keyup="addValue($event, index)"  >
+          <input class='setup__input' type='number'  :value="time.amount > 0 ? time.amount : 0" @keyup="addValue($event, index)"  >
           <span>{{time.name}}</span>
         </div>
           <div class='adjusters'>
@@ -50,6 +50,13 @@ export default {
 
 
 <style>
+
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+}
+
  .setup {
   display: flex;
   display: flex;
